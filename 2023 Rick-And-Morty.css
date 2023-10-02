@@ -1,0 +1,975 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* LA PROPIEDAD BORDER SE UTILIZÓ PARA VISULIZAR EL ESPACIO QUE OCUPAN LOS ELEMENTOS */
+  /*  border: 2px solid red;*/
+  width: 100%;
+  height: 180px;
+  padding: 10px;
+  /*
+    border: 6px solid blue;*/
+  margin-top: -0.1%;
+
+}
+
+/* @MEDIA  HEADER */
+
+@media screen and (max-width: 720px) {
+  header {
+    width: 100vw;
+    height: 29vw;
+    padding: 0;
+    margin-top: -0.1vw;
+
+
+  }
+}
+
+
+/*ELEMENTOS NAV*/
+nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 19px;
+  padding: 1px 2px;
+
+  /*
+    position: relative;*/
+
+  width: 300px;
+
+  margin-left: -43%;
+  margin-top: 1%;
+  /*
+    border: 2px solid rgb(197, 174, 24);*/
+  text-align: center;
+
+}
+
+/* @MEDIA NAV */
+@media screen and (max-width:620px) {
+  nav {
+    display: flex;
+    width: 32vw;
+    margin-left: -6vw;
+    margin-top: 3vw;
+    gap: 3vw;
+    padding: 1vw 1vw;
+  }
+}
+
+
+body {
+  background-color: #010211;
+}
+
+video {
+  position: fixed;
+  max-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: -8;
+}
+
+/* @MEDIA */
+@media screen and (max-width:620px) {
+  video {
+    position: fixed;
+
+    width: 100vw;
+    height: 90vw;
+    top: 28vw;
+    left: 50vw;
+    right: 50vw;
+    /* transform: translateY(-50%) translateX(-50%); 
+      z-index: -1;*/
+  }
+}
+
+
+.tituloRickMorty {
+  display: flex;
+  /* position: relative; */
+  width: 89%;
+  font-size: 4em;
+  font-family: 'Neucha', cursive;
+  margin-top: 2%;
+  margin-left: -36%;
+  animation: fluido 4s ease-in-out infinite;
+  background: linear-gradient(-45deg, #77ae1f, #2631ff, #32ff46, #29f20f);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fluido {
+  0% {
+    background-position: 0 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0 50%
+  }
+}
+
+/* @MEDIA POSICION PALABRA RICK AND MORTY */
+
+@media screen and (max-width:620px) {
+  .tituloRickMorty {
+    position: relative;
+    width: 54vw;
+    margin-top: 8vw;
+    margin-left: -39vw;
+    font-size: 9vw;
+
+  }
+}
+
+/* POSICION DE PALABRA AND */
+span {
+  display: flex;
+  height: 40px;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 73px;
+  font-size: 0.3em;
+}
+
+/* @MEDIA POSICION PALABRA AND */
+@media screen and (max-width:620px) {
+  span {
+    margin-top: 8vw;
+    margin-left: -0.10vw;
+    font-size: 4vw;
+  }
+
+}
+
+
+/* POSICION PALABRA MORTY */
+.morty {
+  display: flex;
+  margin-top: 2%;
+  margin-left: 8%;
+
+}
+
+/* @MEDIA POSICION PALABRA MORTY */
+@media screen and (max-width:620px) {
+  .morty {
+    margin-left: 8vw;
+    margin-top: 3vw;
+    font-size: 9vw;
+
+  }
+}
+
+
+/*IMAGEN LOGO HEADER*/
+.imagenLogo {
+  width: 12%;
+  margin-left: 6%;
+  margin-top: -2%;
+
+  box-shadow: 0 0 50px #6ece08fd,
+    -10px 0 80px rgb(167, 253, 96),
+    10px 0 80px rgb(55, 183, 242);
+  border-radius: 50%;
+
+}
+
+/* @MEDIA IMAGEN LOGO HEADER */
+@media screen and (max-width:620px) {
+  .imagenLogo {
+    width: 15vw;
+    margin-left: 13vw;
+    margin-top: -2vw;
+  }
+}
+
+/* FILTROS NAV */
+/* TODOS */
+/*CAJA BOTON FILTRO TODOS DEL NAV*/
+.contenedorFiltroUno {
+  padding: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* @MEDIA  CAJA BOTON FILTRO TODOS DEL NAV*/
+@media screen and (max-width:620px) {
+  .contenedorFiltroUno {
+    padding: 0;
+  }
+}
+
+/* BOTON TODOS DEL NAV*/
+a.toDos {
+  background-color: #222869;
+  color: #c3f92e;
+  font-family: 'Indie Flower', cursive;
+  padding: 3px;
+  font-size: 0.99em;
+  border-radius: 10px;
+  border: 2px solid #c3f92e;
+  cursor: pointer;
+  margin-right: -8px;
+  text-decoration: none;
+}
+
+/* ESTADO */
+/*1 CAJA BOTON FILTRO ESTADO DEL NAV*/
+.estado {
+  background-color: #222869;
+  color: #c3f92e;
+  font-family: 'Indie Flower', cursive;
+  padding: 3px;
+  font-size: 0.99em;
+  border-radius: 10px;
+  border: 2px solid #c3f92e;
+  cursor: pointer;
+  margin-right: -8px;
+}
+
+/* 2 CAJA MENU DESPLEGABLE ESTADO DEL NAV*/
+.menuEstado {
+  display: none;
+  position: absolute;
+  background-color: #4c0267;
+  width: 9%;
+  margin-left: -17px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 3 TEXTO DESPLEGABLE DEL NAV*/
+.menuEstado a {
+  color: #f4f82a;
+  padding: 4px 8px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-family: 'Indie Flower', cursive;
+  font-size: 0.99em;
+}
+
+/* 4 EFECTOS */
+/* A CAMBIO DE COLOR DESPLEGABLE (ESTADO) DEL NAV */
+.menuEstado a:hover {
+  background-color: #35b702
+}
+
+/* B DESPLIEGUE DEL MENU */
+.contenedorFiltroDos:hover .menuEstado {
+  display: block;
+}
+
+/* C CAMBIO DE COLOR DEL BOTON AL PASAR EL MOUSSE */
+.contenedorFiltroDos:hover .estado {
+  background-color: #119705;
+}
+
+/* ESPECIES */
+/* 1 CAJA BOTON FILTRO ESPECIES DEL NAV*/
+.especies {
+  background-color: #222869;
+  color: #c3f92e;
+  padding: 3px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 0.99em;
+  border-radius: 10px;
+  border: 2px solid #c3f92e;
+  cursor: pointer;
+  margin-right: -8px;
+}
+
+/* 2 CAJA MENU DESPLEGABLE ESTADO DEL NAV*/
+.menuEspecies {
+  display: none;
+  position: absolute;
+  background-color: #4c0267;
+  width: 9%;
+  margin-left: -11px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* 3 TEXTO DESPLEGABLE DEL NAV*/
+.menuEspecies a {
+  color: #f4f82a;
+  padding: 4px 8px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1em;
+}
+
+/* 4 EFECTOS */
+/* A CAMBIO DE COLOR DESPLEGABLE (ESPECIES) DEL NAV */
+.menuEspecies a:hover {
+  background-color: #35b702;
+}
+
+/* B DESPLIEGUE DEL MENU */
+.contenedorFiltroTres:hover .menuEspecies {
+  display: block;
+}
+
+/* C CAMBIO DE COLOR DEL BOTON AL PASAR EL MOUSSE */
+.contenedorFiltroTres:hover .especies {
+  background-color: #119705;
+}
+
+
+/* 1 CAJA BOTON FILTRO GENERO DEL NAV*/
+.genero {
+  background-color: #222869;
+  color: #c3f92e;
+  padding: 3px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 0.99em;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #c3f92e;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+/* 2 CAJA MENU DESPLEGABLE GENERO DEL NAV*/
+.menuGenero {
+  display: none;
+  position: absolute;
+  background-color: #4c0267;
+  width: 9%;
+  margin-left: -17px;
+  box-shadow: 0px 8px 16px 0px rgba(12, 5, 5, 0.2);
+}
+
+/* 3 TEXTO DESPLEGABLE DEL NAV */
+.menuGenero a {
+  color: #f4f82a;
+  padding: 4px 4px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1em;
+}
+
+/* 4 EFECTOS */
+/* A CAMBIO DE COLOR DESPLEGABLE (ESPECIES) DEL NAV */
+.menuGenero a:hover {
+  background-color: #35b702;
+}
+
+/* B DESPLIEGUE DEL MENU */
+.contenedorFiltroCuatro:hover .menuGenero {
+  display: block;
+}
+
+/* C CAMBIO DE COLOR DEL BOTON AL PASAR EL MOUSSE */
+.contenedorFiltroCuatro:hover .genero {
+  background-color: #119705;
+}
+
+/* @MEDIA  BOTONES DEL NAV */
+@media screen and (max-width:620px) {
+
+  a.toDos,
+  .estado,
+  .especies,
+  .genero {
+    display: flex;
+    font-size: 1.9vw;
+    border-radius: 1.4vw;
+
+  }
+}
+
+/*1 CONTAINER*/
+.container {
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  max-width: 100%;
+  margin: 2px;
+  margin-top: -2%;
+  /*
+    border: 2px solid #ff0000;*/
+}
+
+/* @MEDIA 1 CONTAINER */
+@media screen and (max-width:620px) {
+  .container {
+    display: flex;
+    margin-top: -4vw;
+    gap: 1vw;
+    height: 45vw;
+  }
+}
+
+/*2 DIMENSIONES DE LA CAJA QUE CONTIENE CAJA UNO Y DOS*/
+.container .cardsPersonajes {
+  width: 150px;
+  height: 160px;
+  margin-top: 59%;
+  /* position: relative;*/
+}
+
+/*@MEDIA 2 DIMENSIONES DE LA CAJA QUE CONTIENE CAJA UNO Y DOS*/
+@media screen and (max-width:620px) {
+  .container .cardsPersonajes {
+    justify-content: center;
+    width: 19vw;
+    height: 3vw;
+    margin-top: -15vw;
+
+  }
+}
+
+
+/*3 DIMENSIONES DE CAJA (UNO.DOS)*/
+.container .cardsPersonajes .caja {
+  transition: .4s;
+}
+
+/*4 POSICIONAMIENTO-TRASLACION ARRIBA CAJA UNO*/
+.container .cardsPersonajes .caja.cajaUno {
+  position: relative;
+  width: 7.7em;
+  height: 7.7em;
+  border-radius: 50%;
+  padding: 0;
+  margin-top: -71px;
+  margin-left: 20px;
+  background: #030e27;
+  /* display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center; */
+  z-index: 1;
+  transform: translateY(90px);
+}
+
+/* @MEDIA 4 DIMENSION Y POSICIONAMIENTO DE LA IMAGEN PERSONAJE*/
+@media screen and (max-width:620px) {
+  .container .cardsPersonajes .caja.cajaUno {
+    width: 15vw;
+    height: 15vw;
+    margin-top: -9vw;
+    margin-left: 1vw;
+    transform: translateY(90px);
+  }
+}
+
+/*5 EFECTO LUMINOSO-TRASLACION CAJA UNO*/
+.container .cardsPersonajes:hover .caja.cajaUno {
+  transform: translateY(0);
+  box-shadow: 0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
+
+/*6 EFECTO OPACIDAD*/
+.container .cardsPersonajes .caja.cajaUno .contenido {
+  opacity: .9;
+  transition: 0.5s;
+  text-align: center;
+}
+
+/*7*/
+.container .cardsPeronajes:hover .caja.cajaUno .contenido {
+  opacity: 1;
+
+}
+
+/*8 DIMENSION Y POSICIONAMIENTO DE LA IMAGEN PERSONAJE*/
+.container .cardsPersonajes .caja.caja .contenido .personajesImage {
+  width: 7.7em;
+  border-radius: 50%;
+  margin-top: -1%;
+  margin-left: -2px;
+  display: inline-block;
+
+}
+
+/* @MEDIA 8 DIMENSION Y POSICIONAMIENTO DE LA IMAGEN PERSONAJE*/
+@media screen and (max-width:620px) {
+  .container .cardsPersonajes .caja.caja .contenido .personajesImage {
+    width: 16vw;
+    margin-top: -1vw;
+    margin-left: -1vw;
+  }
+}
+
+/* 9 EFECTO BORDE DE LA IMAGEN */
+.container .cardsPersonajes .caja.cajaUno .contenido .personajesImage {
+  border: 1.6px solid rgb(89, 255, 12);
+
+  box-shadow: 0px 0px 20px;
+  animation: infinite destello 2s;
+}
+
+@keyframes destello {
+
+  0%,
+  100% {
+    box-shadow: 0px 0px 20px rgb(110, 226, 43);
+  }
+
+  50% {
+    box-shadow: 0px 0px 0px rgb(74, 250, 10);
+  }
+
+}
+
+/*9 TEXTO NOMBRE DEL PERSONAJE*/
+.container .cardsPersonajes .caja.cajaUno .contenido .personajesName {
+  position: relative;
+  margin-top: -4%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1em;
+  color: #ffff1c;
+  text-align: center;
+}
+
+/*9 TEXTO NOMBRE DEL PERSONAJE*/
+@media screen and (max-width:620px) {
+  .container .cardsPersonajes .caja.cajaUno .contenido .personajesName {
+    font-size: 3vw;
+    width: 19vw;
+    margin-left: -3vw;
+  }
+}
+
+/*10*/
+.container .cardsPersonajes .caja.cajaUno .contenido .ver-mas {
+  transition: .5s;
+}
+
+/*11 DIMENSION Y POSICIONAMIENTO DE CAJA DOS*/
+.container .cardsPersonajes .caja.cajaDos {
+  position: relative;
+  width: 123px;
+  height: 123px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 19px;
+  /* background: whitesmoke;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(242, 100, 240, 0.8);
+  transform: translateY(-50px);
+}
+
+/*@MEDIA 11 DIMENSION Y POSICIONAMIENTO DE CAJA DOS*/
+@media screen and (max-width:620px) {
+  .container .cardsPersonajes .caja.cajaDos {
+
+    width: 15vw;
+    height: 15vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    transform: translateY(10px);
+
+  }
+}
+
+/*12*/
+.container .cardsPersonajes:hover .caja.cajaDos {
+  transform: translateY(0);
+}
+
+
+/*13*/
+.container .cardsPersonajes .caja.cajaDos .contenido .espeCie,
+.estaDo,
+.geneRo,
+.ver-mas {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.5em;
+  text-align: left;
+  width: 102px;
+  margin-left: 7px;
+  padding: 0;
+  color: #f4f82a;
+}
+
+/*14 TEXTO INFORMACION DEL PERSONAJE ESPECIE ESTADO GENERO*/
+.container .cardsPersonajes .caja.cajaDos .contenido {
+  /* display: block; */
+  text-decoration: none;
+  font-size: 1.3em;
+  text-align: left;
+  /* background-color: red; */
+  box-sizing: border-box;
+  padding: 0em;
+  width: 25px;
+  height: 25px;
+  margin: 16px 0 0;
+  margin-left: -40px;
+  margin-top: -23px;
+
+}
+
+
+/* @MEDIA 1*/
+
+/* @MEDIA 14*/
+@media screen and (max-width:620px) {
+  .container .cardsPersonajes .caja.cajaDos .contenido {
+    width: 25px;
+    font-size: 2vw;
+    margin-left: -4vw;
+    margin-top: 3vw;
+
+  }
+}
+
+/*15*/
+.container .cardsPersonajes .caja.cajaDos .contenido .ver-mas:hover {
+  background: #333;
+  color: whitesmoke;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* BOTON VER-MAS INFO DEL PERSONAJE */
+button.ver-mas {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  padding: 1px 8px 5px 5px;
+  background-color: #2547b7;
+  color: #c3f92e;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 80%;
+  margin-left: 9%;
+}
+
+@media screen and (max-width:620px) {
+  button.ver-mas {
+    width: 15px;
+    height: 15px;
+    font-size: 3vw;
+    padding: 0px 6px 3px 3px;
+  }
+
+}
+
+/*PERSONAJE INDIVIDUAL */
+.cardsIndividual {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 250px;
+  height: 250px;
+  margin-left: 30%;
+  margin-top: 4%;
+  border: 4px solid rgba(11, 26, 194, 0.217);
+  border-radius: 50%;
+}
+
+/* @MEDIA PERSONAJE INDIVIDUAL */
+@media screen and (max-width:620px) {
+  .cardsIndividual {
+    display: flex;
+    width: 40vw;
+    height: 40vw;
+    margin-left: 13vw;
+    margin-top: 14vw;
+  }
+}
+
+/*IMAGEN PERSONAJE INDIVIDUAL*/
+.personajeIndividual {
+  width: 70%;
+  border-radius: 50%;
+  margin-left: -60%;
+  margin-top: 1%;
+  box-shadow: 0px 0px 20px;
+  animation: infinite destello 2s;
+
+}
+
+@keyframes destello {
+
+  0%,
+  100% {
+    box-shadow: 0px 0px 20px rgb(156, 255, 139);
+  }
+
+  50% {
+    box-shadow: 0px 0px 0px rgb(250, 238, 10);
+  }
+
+}
+
+/* @MEDIA IMAGEN PERSONAJE INDIVIDUAL */
+@media screen and (max-width:620px) {
+  .personajeIndividual {
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    margin-left: -40vw;
+    margin-top: 8vw;
+  }
+}
+
+/* NOMBRE PERSONAJE INDIVIDUAL */
+.individualName {
+  display: inline-block;
+  color: #2bf589;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 208px;
+  margin-left: -99px;
+}
+
+/*@MEDIA NOMBRE PERSONAJE INDIVIDUAL */
+@media screen and (max-width:620px) {
+  .individualName {
+    display: flex;
+    width: 36vw;
+    height: 10vw;
+    font-size: 6vw;
+    margin-left: -3vw;
+    margin-top: 6vw;
+    text-align: center;
+  }
+}
+
+/*BOTON VOLVER AL PANEL GENERAL  */
+.ver-menos {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  padding: 0px;
+  background-color: #2547b7;
+  color: #c3f92e;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.5em;
+  margin-top: 9%;
+  margin-left: -630px;
+
+}
+
+@media screen and (max-width:620px) {
+  .ver-menos {
+    display: flex;
+    width: 5.6vw;
+    height: 5.6vw;
+    font-size: 4vw;
+    margin-left: -130vw;
+    margin-top: 59vw;
+    text-align: center;
+  }
+}
+
+/* TEXTO PERSONAJE INDIVIDUAL */
+.parrafo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Neucha', cursive, monospace;
+  color: #2bf589;
+  width: 800px;
+  height: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.99em;
+  margin: 0 auto;
+  margin-left: 49px;
+  text-align: center;
+  border-right: 0.15em solid rgb(48, 17, 48);
+  animation: escribir 5s steps(199) 1s 1 normal both, blink 1s steps(199) infinite;
+}
+
+/* EFECTO TEXTO PERSONAJE INDIVIDUAL */
+@keyframes escribir {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 130%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.parrafo {
+  margin-top: -9%;
+
+}
+
+@media screen and (max-width:620px) {
+  .parrafo {
+    position: relative;
+    margin-left: -90vw;
+    width: 900vw;
+    height: 100vw;
+    margin-left: -10vw;
+    font-size: 2.7vw;
+    margin-top: -2vw;
+  }
+}
+
+/* POSICION ICONOS */
+.material-symbols-outlined {
+  position: relative;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+/* BOTONES PAGINACION*/
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  margin-left: 403px;
+  margin-top: 34px;
+  gap: 2px;
+  /* border: 1px solid red */
+}
+
+@media screen and (max-width:620px) {
+  .botones {
+    margin-top: 170vw;
+    margin-left: 35vw;
+    width: 30vw;
+    gap: 1vw;
+
+
+  }
+}
+
+button.anterior {
+  width: 30px;
+  height: 30px;
+  background-color: #09f528;
+  color: #2547b7;
+  box-shadow: inset 90px 3px 0px rgba(37, 209, 225, 0.176);
+  border-radius: 50%;
+  padding: 1px 1px 1px 1px;
+}
+
+
+button.primeraPagina {
+  width: 30px;
+  height: 30px;
+  background-color: #5a80fe;
+  color: #c3f92e;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1px 1px 1px 1px;
+}
+
+button.ultimaPagina {
+  width: 30px;
+  height: 30px;
+  background-color: #5a80fe;
+  color: #c3f92e;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1px 1px 1px 1px;
+}
+
+button.siguiente {
+  width: 30px;
+  height: 30px;
+  background-color: #09f528;
+  color: #2547b7;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1px 1px 1px 1px;
+}
+
+/* @MEDIA BOTONES PAGINACION */
+@media screen and (max-width:620px) {
+
+  button.anterior,
+  button.primeraPagina,
+  button.ultimaPagina,
+  button.siguiente {
+    width: 5vw;
+    height: 5vw;
+    padding: 1vw 1vw;
+  }
+}
+
+/* @MEDIA ICONOS BOTONES PAGINACION */
+
+@media screen and (max-width:620px) {
+  .material-symbols-outlined {
+    display: flex;
+    font-size: 4vw;
+    margin-top: -1vw;
+    margin-left: -1vw;
+  }
+}
+
+
+footer {
+  display: flex;
+  background-color: #20344b9a;
+  padding: 6px;
+  max-width: 100%;
+  height: 60px;
+  border: 1px solid #759cec6f;
+  margin-top: 6%;
+
+}
+
+@media screen and (max-width:620px) {
+  footer {
+    height: 9vw;
+    font-size: 2vw;
+    margin-top: -1vw;
+
+  }
+}
+
+
+.informacion {
+  display: flex;
+  margin-left: 3px;
+  font-family: 'Neucha', cursive;
+  color: #4fe60e;
+
+}
